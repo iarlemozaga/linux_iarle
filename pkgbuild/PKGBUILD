@@ -7,7 +7,7 @@
 _basekernel=6.7
 _basever=${_basekernel//.}
 _kernelname=-XIVASTUDIO
-pkgbase=linux${_basever}
+pkgbase=linux-xivastudio-latest
 pkgname=("$pkgbase" "$pkgbase-headers")
 pkgver=6.7.3
 pkgrel=1
