@@ -6,8 +6,8 @@
 
 _basekernel=6.7
 _basever=${_basekernel//.}
-_kernelname=-XIVASTUDIO
-pkgbase=linux-xivastudio-latest
+_kernelname=-BIGLINUX
+pkgbase=linux-biglinux-latest
 pkgname=("$pkgbase" "$pkgbase-headers")
 pkgver=6.7.3
 pkgrel=1
@@ -116,7 +116,7 @@ build() {
   make ${MAKEFLAGS} LOCALVERSION= bzImage modules
 }
 
-package_linux-xivastudio-latest() {
+package_linux-biglinux-latest() {
   pkgdesc="The ${pkgbase/linux/Linux} kernel and modules"
   depends=('coreutils' 'linux-firmware' 'kmod' 'initramfs')
   optdepends=('wireless-regdb: to set the correct wireless channels of your country')
@@ -149,7 +149,7 @@ package_linux-xivastudio-latest() {
   depmod -b "${pkgdir}/usr" -F System.map "${_kernver}"
 }
 
-package_linux-xivastudio-latest-headers() {
+package_linux-biglinux-latest-headers() {
   pkgdesc="Header files and scripts for building modules for ${pkgbase/linux/Linux} kernel"
   depends=('gawk' 'python' 'libelf' 'pahole')
   provides=("linux-headers=$pkgver")
